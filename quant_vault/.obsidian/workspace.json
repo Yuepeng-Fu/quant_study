@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "1a5cd7f38e11f915",
+        "id": "a94a703b09707739",
         "type": "tabs",
         "children": [
           {
-            "id": "5b955d19ace8f43a",
+            "id": "9d8be37d7fc73c6c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "03_Research_Logs/未命名.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "未命名"
             }
           }
         ]
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "d331ed482f65c70d",
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "03_Research_Logs/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "未命名 的反向链接列表"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "03_Research_Logs/未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "出链"
+              "title": "未命名 的出链列表"
             }
           },
           {
@@ -136,12 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "03_Research_Logs/未命名.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "未命名 的大纲"
             }
           }
         ]
@@ -158,11 +165,30 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a869cc05233cfe13",
+  "active": "9d8be37d7fc73c6c",
   "lastOpenFiles": [
-    "欢迎.md"
+    "2025-06-21.md",
+    "03_Research_Logs/未命名.md",
+    "templates/daily_research.md",
+    "attachments",
+    "06_Tool_Resources",
+    "05_Code_Notes",
+    "templates/weekly_plan.md",
+    "04_Project_Plans",
+    "03_Research_Logs",
+    "02_Strategy_Ideas",
+    "01_Learning_Notes",
+    "00_Inbox",
+    "未命名.md",
+    "换手率.md",
+    "templates/strategy_idea.md",
+    "templates/learning_note.md",
+    "欢迎.md",
+    "templates",
+    "新建文件夹"
   ]
 }
