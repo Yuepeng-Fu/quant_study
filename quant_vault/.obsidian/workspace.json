@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Research_Logs/未命名.md",
+                "file": "templates/daily_research.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "daily_research"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03_Research_Logs/未命名.md",
+                "file": "03_Research_Logs/25-06-21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "未命名 的反向链接列表"
+              "title": "25-06-21 的反向链接列表"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03_Research_Logs/未命名.md",
+                "file": "03_Research_Logs/25-06-21.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "未命名 的出链列表"
+              "title": "25-06-21 的出链列表"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Research_Logs/未命名.md",
+                "file": "03_Research_Logs/25-06-21.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "未命名 的大纲"
+              "title": "25-06-21 的大纲"
             }
           }
         ]
@@ -171,9 +171,11 @@
   },
   "active": "9d8be37d7fc73c6c",
   "lastOpenFiles": [
-    "2025-06-21.md",
-    "03_Research_Logs/未命名.md",
+    "03_Research_Logs/25-06-21.md",
     "templates/daily_research.md",
+    "03_Research_Logs/未命名.md",
+    "未命名.md",
+    "2025-06-21.md",
     "attachments",
     "06_Tool_Resources",
     "05_Code_Notes",
@@ -183,7 +185,6 @@
     "02_Strategy_Ideas",
     "01_Learning_Notes",
     "00_Inbox",
-    "未命名.md",
     "换手率.md",
     "templates/strategy_idea.md",
     "templates/learning_note.md",

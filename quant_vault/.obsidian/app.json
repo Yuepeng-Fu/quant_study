@@ -1,4 +1,8 @@
 {
-  "strictLineBreaks": false,
-  "showLineNumber": true
+  "strictLineBreaks": true,
+  "showLineNumber": false,
+  "propertiesInDocument": "visible",
+  "newFileLocation": "current",
+  "livePreview": true,
+  "showIndentGuide": false
 }
