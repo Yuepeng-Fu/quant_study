@@ -4,21 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "a94a703b09707739",
+        "id": "fabcfefe8eb119c1",
         "type": "tabs",
         "children": [
           {
-            "id": "9d8be37d7fc73c6c",
+            "id": "dc20aeb6e04a2bbf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "templates/daily_research.md",
+                "file": "03_Research_Logs/25-06-24.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": true,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
-              "title": "daily_research"
+              "title": "25-06-24"
             }
           }
         ]
@@ -78,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 280.5
   },
   "right": {
     "id": "d331ed482f65c70d",
@@ -94,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03_Research_Logs/25-06-21.md",
+                "file": "01_Learning_Notes/行业轮动策略.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "25-06-21 的反向链接列表"
+              "title": "行业轮动策略 的反向链接列表"
             }
           },
           {
@@ -166,30 +176,38 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "9d8be37d7fc73c6c",
+  "active": "dc20aeb6e04a2bbf",
   "lastOpenFiles": [
-    "03_Research_Logs/25-06-21.md",
+    "01_Learning_Notes/策略学习_Strategies/行业轮动策略.md",
+    "01_Learning_Notes/量化meta-structure.md",
+    "03_Research_Logs/25-06-24.md",
+    "attachments/六边形模型看行业轮动策略_观点频道_财新网.pdf",
+    "attachments/期权、期货及其他衍生产品.pdf",
+    "01_Learning_Notes/因子理论_Factors/如何理解因子挖掘.md",
+    "templates/strategy_learning.md",
+    "01_Learning_Notes/策略学习_Strategies/因子挖掘的理解.md",
+    "01_Learning_Notes/策略学习_Strategies",
+    "01_Learning_Notes/因子理论_Factors",
+    "01_Learning_Notes/金融基础_Fundamentals/期权、期货及其他衍生品/Learning Outline.md",
+    "01_Learning_Notes/金融基础_Fundamentals",
+    "03_Research_Logs/25-06-22.md",
+    "04_Project_Plans/roadmap.pdf",
+    "templates/learning_note.md",
+    "templates/strategy_idea.md",
+    "attachments/目录.pdf",
+    "01_Learning_Notes/金融基础_Fundamentals/期权、期货及其他衍生品",
+    "attachments/~~$期权、期货及其他衍生产品.pdf",
+    "attachments/期权、期货及其他衍生产品（原书第10版） ([加]约翰·赫尔（John C. Hull）) (Z-Library).pdf",
     "templates/daily_research.md",
-    "03_Research_Logs/未命名.md",
+    "03_Research_Logs/25-06-21.md",
     "未命名.md",
     "2025-06-21.md",
-    "attachments",
-    "06_Tool_Resources",
-    "05_Code_Notes",
     "templates/weekly_plan.md",
-    "04_Project_Plans",
-    "03_Research_Logs",
-    "02_Strategy_Ideas",
-    "01_Learning_Notes",
-    "00_Inbox",
     "换手率.md",
-    "templates/strategy_idea.md",
-    "templates/learning_note.md",
-    "欢迎.md",
-    "templates",
-    "新建文件夹"
+    "欢迎.md"
   ]
 }

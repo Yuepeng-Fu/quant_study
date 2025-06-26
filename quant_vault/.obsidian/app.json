@@ -4,5 +4,7 @@
   "propertiesInDocument": "visible",
   "newFileLocation": "current",
   "livePreview": true,
-  "showIndentGuide": false
+  "showIndentGuide": false,
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "attachments"
 }
