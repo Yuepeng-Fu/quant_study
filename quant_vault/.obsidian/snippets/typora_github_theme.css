@@ -1,0 +1,135 @@
+body {
+	/* Font configuration for English and Chinese */
+	--font-text: 'Times New Roman', '宋体', 'SimSun', serif;
+	--font-interface: 'Times New Roman', '宋体', 'SimSun', sans-serif;
+	--font-editor: 'Times New Roman', '宋体', 'SimSun', monospace;
+	
+	/* Line spacing configuration */
+	--line-height-normal: 1.7;
+	--line-height-tight: 1.4;
+
+	/* list 相关样式 */
+	--list-spacing: 0.3rem;
+	--list-marker-color: #545955;
+	/* 表格颜色交替 */
+	--table-row-alt-background: #f8f8f8;
+	/* 代码块颜色 */
+	--code-normal: var(--text-nornal);
+	--code-background: #f8f8f8;
+	/* 链接颜色 */
+	--link-external-color: #4183c4;
+	/* 导航栏字体 */
+	--nav-item-color: black;
+	--nav-item-weight: 500;
+	--nav-item-size: 97%;
+	/* 导航栏图标颜色 */
+	--nav-collapse-icon-color: #777;
+	--nav-collapse-icon-color-collapsed: #222;
+	/* 引用 */
+	--blockquote-border-thickness: 4px;
+	--blockquote-border-color: rgb(223, 226, 229);
+	/* 选中文字的背景色 */
+	--text-selection: #dae3ea;
+}
+
+
+/* quiet-outline */
+.quiet-outline .n-tree-node-content {
+	font-weight: 500;
+}
+
+/* inline 代码块 */
+span.cm-inline-code {
+	background-color: #f3f4f4 !important;
+	border: 1px solid #e7eaed;
+}
+
+/* 标题 */
+.HyperMD-header {
+	padding-bottom: 0.4rem !important;
+	border-bottom: 1px solid #eee;
+}
+
+/* 引用 */
+.HyperMD-quote {
+	color: #777;
+}
+
+/* 隐藏链接图片 */
+.external-link {
+	padding-right: 0;
+	background-size: 0;
+}
+
+/* 代码块缩进 */
+.HyperMD-codeblock {
+	tab-size: 4;
+}
+
+/* list 行首添加空白 */
+.HyperMD-list-line > .cm-formatting-list + span:before {
+	content: '  ';
+}
+
+/* list 相关样式 */
+/* https://forum.obsidian.md/t/style-bullets-in-lists-by-level/46152 */
+.markdown-source-view.mod-cm6 :is(.HyperMD-list-line-1, .HyperMD-list-line-5) .list-bullet:after {
+	/* Bullet */
+	height: 5.5px;
+	width: 5.5px;
+	border-radius: 50%;
+	background-color: var(--list-marker-color);
+}
+
+.markdown-source-view.mod-cm6 :is(.HyperMD-list-line-2, .HyperMD-list-line-6) .list-bullet:after {
+	/* Hollow Bullet */
+	height: 4px;
+	width: 4px;
+	background-color: Transparent;
+	border-color: var(--list-marker-color);
+	border-style: solid;
+	border-radius: 50%;
+	border-width: 1.5px;
+}
+
+.markdown-source-view.mod-cm6 :is(.HyperMD-list-line-3, .HyperMD-list-line-7) .list-bullet:after {
+	/* Solid Square */
+	height: 5.5px;
+	width: 5.5px;
+	border-radius: 0%;
+	background-color: var(--list-marker-color);
+}
+
+.markdown-source-view.mod-cm6 :is(.HyperMD-list-line-4, .HyperMD-list-line-8) .list-bullet:after {
+	/* Hollow Square */
+	height: 4px;
+	width: 4px;
+	background-color: Transparent;
+	border-color: var(--list-marker-color);
+	border-style: solid;
+	border-radius: 0%;
+	border-width: 1.5px;
+}
+
+/* https://forum.obsidian.md/t/adding-caption-to-images/16431/24 */
+/* 图片居中 */
+img {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+}
+    
+ .markdown-source-view.mod-cm6 .cm-content > * {
+        margin: auto auto !important;
+}
+
+/* 图片下面显示 alt text */
+.image-embed[alt]:after {
+    content: attr(alt);
+    display: block;
+    margin: 0.2rem 1rem 1rem 1rem;
+    font-size: 90%;
+    line-height: 1.4;
+    color: var(--text-faint);
+    text-align: center;
+}
