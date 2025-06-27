@@ -5,11 +5,11 @@ body {
 	--font-editor: 'Times New Roman', '宋体', 'SimSun', monospace;
 	
 	/* Line spacing configuration */
-	--line-height-normal: 1.7;
+	--line-height-normal: 2.0;
 	--line-height-tight: 1.4;
 
 	/* list 相关样式 */
-	--list-spacing: 0.3rem;
+	--list-spacing: 0.6rem;
 	--list-marker-color: #545955;
 	/* 表格颜色交替 */
 	--table-row-alt-background: #f8f8f8;
@@ -26,7 +26,7 @@ body {
 	--nav-collapse-icon-color: #777;
 	--nav-collapse-icon-color-collapsed: #222;
 	/* 引用 */
-	--blockquote-border-thickness: 4px;
+	--blockquote-border-thickness: 6px;
 	--blockquote-border-color: rgb(223, 226, 229);
 	/* 选中文字的背景色 */
 	--text-selection: #dae3ea;
@@ -46,8 +46,7 @@ span.cm-inline-code {
 
 /* 标题 */
 .HyperMD-header {
-	padding-bottom: 0.4rem !important;
-	border-bottom: 1px solid #eee;
+	padding-bottom: 0.6rem !important;
 }
 
 /* 引用 */
