@@ -5,11 +5,11 @@ body {
 	--font-editor: 'Times New Roman', '宋体', 'SimSun', monospace;
 	
 	/* Line spacing configuration */
-	--line-height-normal: 2.0;
+	--line-height-normal: 2.5;
 	--line-height-tight: 1.4;
 
 	/* list 相关样式 */
-	--list-spacing: 0.6rem;
+	--list-spacing: 0rem;
 	--list-marker-color: #545955;
 	/* 表格颜色交替 */
 	--table-row-alt-background: #f8f8f8;
@@ -32,6 +32,14 @@ body {
 	--text-selection: #dae3ea;
 }
 
+p {
+    line-height: var(--line-height-tight); /* 1.4 for wrapped lines */
+}
+
+/* Manual line breaks get more spacing */
+br {
+    line-height: var(--line-height-normal); /* 2.5 for intentional breaks */
+}
 
 /* quiet-outline */
 .quiet-outline .n-tree-node-content {
