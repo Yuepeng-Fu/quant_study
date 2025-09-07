@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "80d9ef8863da0984",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "attachments/期权、期货及其他衍生产品.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "期权、期货及其他衍生产品"
-            }
-          },
-          {
             "id": "16953a2ee792b838",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Learning_Notes/金融基础_Fundamentals/期权、期货及其他衍生品/01_导论.md",
+                "file": "03_Research_Logs/2025-09-07.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -40,11 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_导论"
+              "title": "2025-09-07"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -76,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#待实现",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -165,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Research_Logs/25-06-21.md",
+                "file": "03_Research_Logs/25-07-16.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "25-06-21 的大纲"
+              "title": "25-07-16 的大纲"
             }
           },
           {
@@ -193,6 +180,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:创建新数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -205,36 +193,43 @@
   },
   "active": "16953a2ee792b838",
   "lastOpenFiles": [
+    "03_Research_Logs/25-09-03.md",
+    "03_Research_Logs/2025-09-07.md",
+    "01_Learning_Notes/策略学习_Strategies/行业轮动策略.md",
+    "00_Inbox/stablecoin.md",
+    "03_Research_Logs/25-07-16.md",
+    "02_Strategy_Ideas/均线交叉策略.md",
+    "00_Inbox/均线交叉策略震荡期分析.md",
+    "assets/均线交易策略上证指数测试图.png",
+    "assets/output.png",
+    "templates/strategy_idea.md",
+    "templates/strategy_learning.md",
+    "01_Learning_Notes/量化meta-structure.md",
+    "01_Learning_Notes/金融基础_Fundamentals/期权、期货及其他衍生品/01_导论.md",
+    "数据源/WIND.md",
+    "01_Learning_Notes/因子理论_Factors/如何理解因子挖掘.md",
+    "数据源",
     "attachments/期权、期货及其他衍生产品.pdf",
+    "03_Research_Logs/25-06-27.md",
     "未命名.md",
     "03_Research_Logs/25-06-26.md",
-    "01_Learning_Notes/金融基础_Fundamentals/期权、期货及其他衍生品/01_导论.md",
     "assets",
     "01_Learning_Notes/金融基础_Fundamentals/期权、期货及其他衍生品/Learning Outline.md",
     "templates/learning_note.md",
     "attachments/六边形模型看行业轮动策略_观点频道_财新网.pdf",
     "06_Tool_Resources/YFinance.md",
-    "01_Learning_Notes/策略学习_Strategies/行业轮动策略.md",
     "templates/tool_resource.md",
     "03_Research_Logs/25-06-24.md",
-    "01_Learning_Notes/量化meta-structure.md",
-    "01_Learning_Notes/因子理论_Factors/如何理解因子挖掘.md",
-    "templates/strategy_learning.md",
     "01_Learning_Notes/策略学习_Strategies/因子挖掘的理解.md",
     "01_Learning_Notes/策略学习_Strategies",
     "01_Learning_Notes/因子理论_Factors",
     "01_Learning_Notes/金融基础_Fundamentals",
     "03_Research_Logs/25-06-22.md",
     "04_Project_Plans/roadmap.pdf",
-    "templates/strategy_idea.md",
     "attachments/目录.pdf",
     "01_Learning_Notes/金融基础_Fundamentals/期权、期货及其他衍生品",
-    "attachments/~~$期权、期货及其他衍生产品.pdf",
     "templates/daily_research.md",
     "03_Research_Logs/25-06-21.md",
-    "2025-06-21.md",
-    "templates/weekly_plan.md",
-    "换手率.md",
-    "欢迎.md"
+    "2025-06-21.md"
   ]
 }
