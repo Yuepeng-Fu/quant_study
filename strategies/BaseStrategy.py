@@ -52,7 +52,7 @@ class BaseStrategy(ABC):
     def generate_signals(self, date: pd.Timestamp) -> list:
         """
         [子类必须实现] 核心策略逻辑。
-        根据指定日期的数据，生成目标持仓列表。
+        根据数据，生成指定日期目标持仓列表。
         返回: list[str] - 目标持仓的 ticker 列表。空列表代表空仓。
         """
         raise NotImplementedError

@@ -113,10 +113,10 @@ class ETFMonthlyRotationStrategy:
     def generate_trading_signal_for_tomorrow(self):
         """【新增】生成明日交易信号的实盘函数"""
         print("\n" + "="*50)
-        print(f"正在为明天生成交易计划...")
         
         # 1. 准备数据
         end_date = datetime.now() - pd.Timedelta(days=1)
+        print(f"正在为{end_date}生成交易计划...")
         start_date = end_date - pd.Timedelta(days=max(self.momentum_lookback, self.sma_lookback) + 100)
         if not self._download_data(start_date.strftime('%Y-%m-%d'), end_date.strftime('%Y-%m-%d')):
             print("无法生成信号。")
@@ -317,7 +317,9 @@ if __name__ == '__main__':
         '原材料': '512400.SS',
         '传统能源': '515220.SS',
         '基础设施': '516950.SS',
-        '保险': '515630.SS'
+        '保险': '515630.SS',
+        '电池': '159755.SZ',
+        '化工': '159870.SZ',
     }
     a_share_benchmark = '000300.SS' # 沪深300指数
 
@@ -348,8 +350,8 @@ if __name__ == '__main__':
         top_n=4
     )
 
-    strategy.generate_trading_signal_for_tomorrow()
+    # strategy.generate_trading_signal_for_tomorrow()
 
-    # strategy.run_backtest(start_date='2025-01-01', end_date='2025-09-03')
-    # strategy.display_metrics()
-    # strategy.plot_results()
+    strategy.run_backtest(start_date='2025-01-01', end_date='2025-09-03')
+    strategy.display_metrics()
+    strategy.plot_results()
