@@ -23,8 +23,8 @@ class YFinanceDownloader(BaseDownloader):
     def __init__(self) -> None:
         super().__init__()
         import os
-        os.environ["HTTP_PROXY"] = "https://127.0.0.1:7890"
-        os.environ["HTTPS_PROXY"] = "https://127.0.0.1:7890"
+        os.environ['http_proxy'] = 'http://127.0.0.1:7890'
+        os.environ['https_proxy'] = 'http://127.0.0.1:7890'
 
     def download(self, tickers: list, start_date: str = None, end_date: str = None) -> pd.DataFrame:
         print(f"Downloading data for {tickers} from {start_date} to {end_date}...")
@@ -36,10 +36,6 @@ class YFinanceDownloader(BaseDownloader):
                 print("Warning: No data downloaded. Check tickers and date range.")
                 return None
             
-            # The format from yfinance is already (Field, Ticker). We need to swap levels.
-            # And ensure our standard column names are used.
-            data.columns = data.columns.swaplevel(0, 1)
-            data.sort_index(axis=1, level=0, inplace=True)
             return data
         except Exception as e:
             print(f"An error occurred during download: {e}")

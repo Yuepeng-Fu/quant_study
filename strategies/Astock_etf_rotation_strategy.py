@@ -7,6 +7,10 @@ import os
 from datetime import datetime, timedelta
 os.environ['http_proxy'] = 'http://127.0.0.1:7890'
 os.environ['https_proxy'] = 'http://127.0.0.1:7890'
+
+from BaseDownloader import YFinanceDownloader
+from BaseStrategy import BaseStrategy
+
 # 设置中文字体，以便图表能正确显示中文
 def set_chinese_font():
     """
@@ -22,13 +26,19 @@ def set_chinese_font():
         # 如果找不到SimHei，可以尝试其他字体
         # plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']
 
-class ETFMonthlyRotationStrategy:
+class ETFMonthlyRotationStrategy(BaseStrategy):
     """
     低频行业ETF轮动策略回测框架
     """
-    def __init__(self, etf_tickers, etf_names, benchmark_ticker, market_timing_ticker,
+    def __init__(self, etf_tickers, downloader, etf_names, benchmark_ticker, market_timing_ticker,
                  momentum_lookback=120, sma_lookback=200, top_n=2, 
                  commission_rate=7e-5):
+        super().__init__(
+            tickers=etf_tickers,
+            downloader=downloader,
+            benchmark_ticker=benchmark_ticker,
+            commission_rate=commission_rate
+        )
         self.etf_tickers = etf_tickers
         self.etf_names = etf_names
         self.benchmark_ticker = benchmark_ticker
@@ -42,14 +52,18 @@ class ETFMonthlyRotationStrategy:
         self.close_prices = None
         self.results = None
 
-    def _download_data(self, start_date, end_date):
+    def _prepare_data(self, start_date, end_date, buffer_days=252):
         """
         MODIFIED: Downloads both Open and Close prices.
         """
         print(f"Downloading historical Open/Close prices from {start_date} to {end_date}...")
         try:
             # Download the full dataset without slicing for 'Close'
-            raw_data = yf.download(self.all_tickers, start=start_date, end=end_date, progress=False)
+            raw_data = self.downloader.download(
+                self.all_tickers,
+                start_date=start_date,
+                end_date=end_date
+            )
             if raw_data.empty: return False
 
             self.open_prices = raw_data['Open']
@@ -94,7 +108,7 @@ class ETFMonthlyRotationStrategy:
             # print(f"Error calculating market timing signal on {date}: {e}")
             return False
 
-    def get_target_holdings(self, date):
+    def generate_signals(self, date):
         """
         【新增】策略核心决策函数 (可复用)
         根据指定日期的数据，返回当天的目标持仓列表。
@@ -110,22 +124,22 @@ class ETFMonthlyRotationStrategy:
         target_holdings = momentum_scores.nlargest(self.top_n).index.tolist()
         return target_holdings
     
-    def generate_trading_signal_for_tomorrow(self):
+    def generate_live_signal(self):
         """【新增】生成明日交易信号的实盘函数"""
         print("\n" + "="*50)
         
         # 1. 准备数据
-        end_date = datetime.now() - pd.Timedelta(days=1)
+        end_date = datetime.now()
         print(f"正在为{end_date}生成交易计划...")
         start_date = end_date - pd.Timedelta(days=max(self.momentum_lookback, self.sma_lookback) + 100)
-        if not self._download_data(start_date.strftime('%Y-%m-%d'), end_date.strftime('%Y-%m-%d')):
+        if not self._prepare_data(start_date.strftime('%Y-%m-%d'), end_date.strftime('%Y-%m-%d')):
             print("无法生成信号。")
             return
 
         # 2. 获取最新交易日并调用核心决策逻辑
         latest_date = self.close_prices.index[-1]
         print(f"使用截至 {latest_date.date()} 的收盘数据进行分析。")
-        target_holdings = self.get_target_holdings(latest_date)
+        target_holdings = self.generate_signals(latest_date)
         
         # 3. 格式化输出交易计划
         print("\n--- 明日交易计划 ---")
@@ -148,7 +162,7 @@ class ETFMonthlyRotationStrategy:
         # 1. Download data
         required_buffer = int(max(self.momentum_lookback, self.sma_lookback) * 1.5 + 50)
         effective_start_date = (pd.to_datetime(start_date) - timedelta(days=required_buffer)).strftime('%Y-%m-%d')
-        if not self._download_data(effective_start_date, end_date):
+        if not self._prepare_data(effective_start_date, end_date):
             return
 
         # 2. Slice data for the actual backtest period
@@ -178,7 +192,7 @@ class ETFMonthlyRotationStrategy:
             if previous_day_close_date:
                 last_holdings = current_holdings.copy()
                 # Get today's target holdings based on yesterday's close
-                current_holdings = self.get_target_holdings(previous_day_close_date)
+                current_holdings = self.generate_signals(previous_day_close_date)
 
                 # Apply commission on turnover
                 turnover_tickers = set(last_holdings) ^ set(current_holdings)
@@ -342,6 +356,7 @@ if __name__ == '__main__':
 
     strategy = ETFMonthlyRotationStrategy(
         etf_tickers=list(selected_etfs.values()),
+        downloader=YFinanceDownloader(),
         etf_names=a_share_etfs,
         benchmark_ticker=selected_benchmark,
         market_timing_ticker=selected_benchmark, # 使用大盘本身做择时
@@ -350,8 +365,8 @@ if __name__ == '__main__':
         top_n=4
     )
 
-    # strategy.generate_trading_signal_for_tomorrow()
+    # strategy.generate_live_signal()
 
-    strategy.run_backtest(start_date='2025-01-01', end_date='2025-09-03')
+    strategy.run_backtest(start_date='2022-01-01', end_date='2025-09-03')
     strategy.display_metrics()
     strategy.plot_results()
