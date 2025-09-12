@@ -365,8 +365,8 @@ if __name__ == '__main__':
         top_n=4
     )
 
-    # strategy.generate_live_signal()
+    strategy.generate_live_signal()
 
-    strategy.run_backtest(start_date='2022-01-01', end_date='2025-09-03')
-    strategy.display_metrics()
-    strategy.plot_results()
+    # strategy.run_backtest(start_date='2023-01-01', end_date='2025-09-03')
+    # strategy.display_metrics()
+    # strategy.plot_results()
