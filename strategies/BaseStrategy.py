@@ -3,6 +3,7 @@ from abc import ABC, abstractmethod
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker
 from datetime import datetime, timedelta
 
 # Assuming BaseDownloader is in a file in the same directory or a package
@@ -168,12 +169,45 @@ class BaseStrategy(ABC):
         print("--------------------------")
 
     def plot_results(self):
-        """可视化回测结果。"""
-        if self.results is None:
+        """
+        Visualizes the backtest results, skipping non-trading days on the x-axis.
+        """
+        if self.results is None or self.results.empty:
             print("No backtest results to plot.")
             return
+
+        fig, ax = plt.subplots(figsize=(14, 7))
+
+        # Plot the data against a simple numerical index (0, 1, 2...).
+        self.results.reset_index(drop=True).plot(
+            ax=ax, 
+            grid=True,
+            drawstyle='steps-post'
+        )
+
+        # --- Customize the x-axis to show dates instead of numbers ---
+        # 1. Get the original date labels as strings
+        date_labels = self.results.index.strftime('%Y-%m-%d')
+
+        # 2. Use MaxNLocator to automatically find a good number of ticks to display
+        # This prevents the x-axis labels from becoming overcrowded.
+        # We aim for a maximum of 10 ticks and ensure they are at the beginning/end.
+        ax.xaxis.set_major_locator(mticker.MaxNLocator(10, prune='both'))
+
+        # 3. Create a formatter that maps the tick's numerical position back to a date label
+        def date_formatter(tick_val, tick_pos):
+            # Ensure the tick value is within the bounds of our data
+            if int(tick_val) < len(date_labels):
+                return date_labels[int(tick_val)]
+            return ''
+
+        ax.xaxis.set_major_formatter(mticker.FuncFormatter(date_formatter))
+
+        # Rotate the date labels for better readability
+        fig.autofmt_xdate()
+
+        ax.set_title("Strategy Performance vs. Benchmark")
+        ax.set_ylabel("Cumulative Value")
+        ax.set_xlabel("Date")
         
-        self.results.plot(figsize=(14, 7), grid=True, title="Strategy Performance vs. Benchmark")
-        plt.ylabel("Cumulative Value")
-        plt.xlabel("Date")
         plt.show()
