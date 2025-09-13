@@ -7,10 +7,7 @@ import os
 from datetime import datetime, timedelta
 # import pandas_ta as ta # NEW: Import for ADX calculation
 
-os.environ['http_proxy'] = 'http://127.0.0.1:7890'
-os.environ['https_proxy'] = 'http://127.0.0.1:7890'
-
-from BaseDownloader import YFinanceDownloader
+from akshare_downloader import AkshareDownloader
 from BaseStrategy import BaseStrategy
 
 # Function to set Chinese font (unchanged)
@@ -310,7 +307,7 @@ if __name__ == '__main__':
     # MODIFIED: Initialize the new V2 strategy class with the new parameters
     strategy_v2 = ETFMonthlyRotationStrategyV2(
         etf_tickers=list(a_share_etfs.values()),
-        downloader=YFinanceDownloader(),
+        downloader=AkshareDownloader(),
         etf_names=a_share_etfs,
         benchmark_ticker=a_share_benchmark,
         market_timing_ticker=a_share_benchmark,
