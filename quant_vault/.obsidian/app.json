@@ -6,5 +6,11 @@
   "livePreview": true,
   "showIndentGuide": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "assets"
+  "attachmentFolderPath": "assets",
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }

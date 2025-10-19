@@ -1,7 +1,5 @@
 {
   "cssTheme": "Typomagical",
   "baseFontSize": 16,
-  "enabledCssSnippets": [
-    "typora_github_theme"
-  ]
+  "enabledCssSnippets": []
 }

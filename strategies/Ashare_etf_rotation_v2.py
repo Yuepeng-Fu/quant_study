@@ -333,4 +333,4 @@ if __name__ == '__main__':
     strategy_v2.plot_results()
 
     # To generate a live signal
-    # strategy_v2.generate_live_signal()
+    strategy_v2.generate_live_signal()

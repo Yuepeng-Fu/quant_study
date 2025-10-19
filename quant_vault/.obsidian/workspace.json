@@ -4,31 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "16c659cd1126afbc",
+        "id": "34c12aeae5d36915",
         "type": "tabs",
         "children": [
           {
-            "id": "16953a2ee792b838",
+            "id": "72d9a7ab8a905b58",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "03_Research_Logs/2025-09-07.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "aFile": "quant_vault/01_Learning_Notes/金融基础_Fundamentals/期权、期货及其他衍生品/01_导论.md",
+                "bFile": "quant_vault/01_Learning_Notes/金融基础_Fundamentals/期权、期货及其他衍生品/01_导论.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "2025-09-07"
+              "icon": "diff",
+              "title": "Diff: 01_导论"
             }
           }
         ]
@@ -63,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#待实现",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -83,12 +73,27 @@
               "icon": "lucide-bookmark",
               "title": "书签"
             }
+          },
+          {
+            "id": "85dc55afa436c93c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "01_Learning_Notes/金融基础_Fundamentals/市销率(PS).md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "市销率(PS) 的大纲"
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 280.5
+    "width": 235.5
   },
   "right": {
     "id": "d331ed482f65c70d",
@@ -123,12 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03_Research_Logs/25-06-21.md",
+                "file": "01_Learning_Notes/金融基础_Fundamentals/市销率(PS).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "25-06-21 的出链列表"
+              "title": "市销率(PS) 的出链列表"
             }
           },
           {
@@ -138,27 +143,12 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true,
+                "useHierarchy": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "标签"
-            }
-          },
-          {
-            "id": "85dc55afa436c93c",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "03_Research_Logs/25-07-16.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "25-07-16 的大纲"
             }
           },
           {
@@ -172,7 +162,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -191,45 +181,47 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "16953a2ee792b838",
+  "active": "72d9a7ab8a905b58",
   "lastOpenFiles": [
-    "03_Research_Logs/25-09-03.md",
-    "03_Research_Logs/2025-09-07.md",
-    "01_Learning_Notes/策略学习_Strategies/行业轮动策略.md",
+    "01_Learning_Notes/股市学习.md",
+    "00_Inbox/股市基础指标学习Roadmap.md",
     "00_Inbox/stablecoin.md",
+    "00_Inbox/订单簿与股价涨跌.md",
+    "01_Learning_Notes/金融基础_Fundamentals/市销率(PS).md",
+    "01_Learning_Notes/金融基础_Fundamentals/市净率(PB).md",
+    "01_Learning_Notes/金融基础_Fundamentals/市盈率(PE).md",
+    "templates/learning_note.md",
+    "templates/daily_research.md",
+    "00_Inbox/均线交叉策略震荡期分析.md",
+    "03_Research_Logs/2025-09-16.md",
+    "03_Research_Logs/2025-09-14.md",
+    "01_Learning_Notes/金融基础_Fundamentals/期权、期货及其他衍生品/01_导论.md",
+    "00_Inbox/未命名.base",
+    "00_Inbox/未命名 1.base",
+    "03_Research_Logs/2025-09-13.md",
+    "06_Tool_Resources/AkShare.md",
+    "06_Tool_Resources/YFinance.md",
+    "03_Research_Logs/2025-09-08.md",
+    "04_Project_Plans/RoadMap.md",
+    "04_Project_Plans/roadmap.pdf",
+    "05_Strategy_Analysis/A股ETF行业轮动策略 V1.md",
+    "attachments/期权、期货及其他衍生产品.pdf",
+    "01_Learning_Notes/金融基础_Fundamentals/期权、期货及其他衍生品/Learning Outline.md",
+    "assets/Pasted image 20250908131729.png",
+    "assets/Pasted image 20250908105803.png",
+    "03_Research_Logs/2025-09-07.md",
+    "03_Research_Logs/25-06-22.md",
+    "03_Research_Logs/25-09-03.md",
+    "01_Learning_Notes/策略学习_Strategies/行业轮动策略.md",
     "03_Research_Logs/25-07-16.md",
     "02_Strategy_Ideas/均线交叉策略.md",
-    "00_Inbox/均线交叉策略震荡期分析.md",
     "assets/均线交易策略上证指数测试图.png",
     "assets/output.png",
-    "templates/strategy_idea.md",
-    "templates/strategy_learning.md",
-    "01_Learning_Notes/量化meta-structure.md",
-    "01_Learning_Notes/金融基础_Fundamentals/期权、期货及其他衍生品/01_导论.md",
-    "数据源/WIND.md",
-    "01_Learning_Notes/因子理论_Factors/如何理解因子挖掘.md",
     "数据源",
-    "attachments/期权、期货及其他衍生产品.pdf",
-    "03_Research_Logs/25-06-27.md",
-    "未命名.md",
-    "03_Research_Logs/25-06-26.md",
     "assets",
-    "01_Learning_Notes/金融基础_Fundamentals/期权、期货及其他衍生品/Learning Outline.md",
-    "templates/learning_note.md",
     "attachments/六边形模型看行业轮动策略_观点频道_财新网.pdf",
-    "06_Tool_Resources/YFinance.md",
-    "templates/tool_resource.md",
-    "03_Research_Logs/25-06-24.md",
-    "01_Learning_Notes/策略学习_Strategies/因子挖掘的理解.md",
     "01_Learning_Notes/策略学习_Strategies",
     "01_Learning_Notes/因子理论_Factors",
-    "01_Learning_Notes/金融基础_Fundamentals",
-    "03_Research_Logs/25-06-22.md",
-    "04_Project_Plans/roadmap.pdf",
-    "attachments/目录.pdf",
-    "01_Learning_Notes/金融基础_Fundamentals/期权、期货及其他衍生品",
-    "templates/daily_research.md",
-    "03_Research_Logs/25-06-21.md",
-    "2025-06-21.md"
+    "01_Learning_Notes/金融基础_Fundamentals"
   ]
 }
