@@ -61,7 +61,7 @@ class ETFMonthlyRotationStrategyV2(BaseStrategy):
         self.hloc_data = None # NEW: Store HLOC for ADX
         self.results = None
 
-    def _prepare_data(self, start_date, end_date):
+    def _prepare_data(self, start_date, end_date, buffer_days=0):
         """
         MODIFIED: Downloads Open, High, Low, Close, and Volume prices.
         """
@@ -79,6 +79,7 @@ class ETFMonthlyRotationStrategyV2(BaseStrategy):
             self.close_prices = raw_data['Close']
             self.volume = raw_data['Volume']
             self.hloc_data = raw_data # Store all data for ADX calculation
+            self.price_data = self.close_prices
 
             for df in [self.open_prices, self.close_prices, self.volume]:
                 if df.isnull().values.any():
@@ -190,6 +191,7 @@ class ETFMonthlyRotationStrategyV2(BaseStrategy):
     # MODIFIED: Core logic now uses the regime and composite score
     def generate_signals(self, date):
         market_regime = self._get_market_regime(date)
+        print(f"Market regime: {market_regime}")
         
         if market_regime in ['BEAR', 'SIDEWAYS']:
             return [] # Go to cash
