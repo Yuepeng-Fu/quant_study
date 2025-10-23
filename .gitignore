@@ -9,3 +9,5 @@ data/
 quant_vault/attachments/期权、期货及其他衍生产品.pdf
 quant_vault/assets/
 .venv/
+*.csv
+*.log
