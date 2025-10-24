@@ -11,3 +11,4 @@ quant_vault/assets/
 .venv/
 *.csv
 *.log
+*.png
