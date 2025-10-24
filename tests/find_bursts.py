@@ -6,7 +6,7 @@ import os
 
 # !! 核心功能: 模拟 "今天"
 # 设置您想 "站立" 的日期 (格式: YYYY-MM-DD)。
-SIMULATION_DATE = "2025-10-22" # <-- 在这里设置您想要的日期
+SIMULATION_DATE = "2025-10-23" # <-- 在这里设置您想要的日期
 
 # --- "爆发中" (Bursting) 的定义 ---
 
@@ -15,7 +15,7 @@ SIMULATION_DATE = "2025-10-22" # <-- 在这里设置您想要的日期
 BURST_LOOKBACK_DAYS = [1, 2] # 检查2日和3日爆发
 
 # 2. 爆发涨幅 (Burst Price Increase)
-BURST_PRICE_INCREASE = 0.1
+BURST_PRICE_INCREASE = 0.08
 
 # --- "爆发前" (Pre-Burst Setup) 的定义 ---
 # (检查爆发开始前一天, 即 "setup_day")
